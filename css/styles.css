@@ -16,6 +16,7 @@ html {
     --bgc-color-hero: #2F303A;
     --bgc-color-commands: #F5F4FA;
     --color-border-cards:  #ECECEC;
+    --color-footer-contact: rgba(255, 255, 255, 0.6);
      
 }
 
@@ -34,28 +35,18 @@ list-style: none;
 padding: 0px;
 margin: 0px;
 }
-/* conteiner */
-.conteiner {
+/* container */
+.container {
     margin-left: auto;
     margin-right: auto;
     width: 1200px;
     padding-left: 15px;
     padding-right: 15px;
 
-    /* outline: 2px solid tomato; */
     
-    display: flex;
+    
     }
     
-    .conteiners {
-    margin-left: auto;
-    margin-right: auto;
-    width: 1200px;
-    padding-left: 15px;
-    padding-right: 15px;
-
-    /* outline: 2px solid tomato; */
-    }
     .header-main {
         display: flex;
         align-items: center;
@@ -69,6 +60,10 @@ margin: 0px;
 /*--------- Header-------- */
 
  /* Logo */
+ header {
+    border-bottom: 1px solid #ECECEC;
+    }
+
 .header-logo {
 color: var(--accent-text-color); 
 
@@ -86,9 +81,7 @@ color: var(--primary-text-color);
 }
 
 /* -----HEADER-SITE */
-.header-main {
-border-bottom: 1px solid #ECECEC;
-}
+
 .header-site .header-link {
 display: block;    
 
@@ -110,8 +103,8 @@ color: var(--accent-text-color);
 
 .header-site {
     display: flex;
-    margin-top: 32px;
-    margin-bottom: 32px;
+    padding-top: 32px;
+    padding-bottom: 32px;
     margin-left: 93px;
 }
 
@@ -126,8 +119,8 @@ margin-right: 50px;
 
 .header-contact {
     display: flex;
-    margin-top: 32px;
-    margin-bottom: 32px;
+    padding-top: 32px;
+    padding-bottom: 32px;
     margin-left: auto;
 }
 .header-contact .item +  .item {
@@ -150,6 +143,7 @@ color: var(--accent-text-color); }
 
 /* HERO  */
 .hero-title {
+width: 696px;
 margin-top: 0px;
 margin-bottom: 30px;
 font-weight: 900;
@@ -163,7 +157,10 @@ color: var(--white-color-text);
 }
 .hero-bgc {
 text-align: center;
-background-color: var(--bgc-color-hero)
+background-color: var(--bgc-color-hero);
+
+padding-top: 200px;
+padding-bottom: 200px;
 }
 
 /* Button */
@@ -173,6 +170,7 @@ text-align: center;
 display: inline-block;
 border-radius: 4px;
 padding: 10px 32px; 
+border: none;
 
 color: var(--white-color-text);
 background-color: var(--accent-text-color);
@@ -186,7 +184,7 @@ cursor: pointer;
 }
 
 
-/* ------Section----- */
+/* ------Principles----- */
 
  .visually-hidden {
      
@@ -203,9 +201,7 @@ cursor: pointer;
         overflow: hidden;
 }
 
-.section-title {
-margin-top: 94px;
-
+.principles-title {
 color: var(--primary-text-color);
 
 font-weight: 700;
@@ -213,18 +209,22 @@ font-size: 14px;
 line-height: 1.14;
 text-transform: uppercase;
 }
- .section-text {
-
+ .principles-text {
 line-height: 1.7;
 color: var(--basic-text-color);
-margin-bottom: 118px;
 margin-top: 10px;
 
  }
- .copy {
+ .principles {
     display: flex;
 }
+.principles-item {}
+
 /* ------WORK------ */
+.examples {
+    padding-top: 0;
+    
+}
  .work-title {
 margin-top: 0;
 margin-bottom: 50px;
@@ -235,26 +235,27 @@ text-align: center;
 
 color: var(--primary-text-color)
  }
-
- .work-image {
-    display: flex;
-    margin-bottom: 188px;
+ .examples-image {
+    display: block;
  }
 
- .work-image .img + .img {
+ .work {
+   display: flex;
+   justify-content: space-between;
+ }
+
+ .work .work-img + .work-img {
     margin-left: 30px;
+    
  }
 /* ------COMMANDS----- */
-.commands .border {
-    border-left: 1px;
-    border-right: 1px;
-    border-bottom: 1px;
-    color: #ECECEC;
+.team {
+    background-color: var(--bgc-color-commands);
 }
-/* чи можна таким чином оформити рамку, для декількох елементів не виходить ( */
- .commands-title{
-margin-bottom: 10px;
+ .team-title{
+text-align: center;
 margin-top: 30px;
+margin-bottom: 10px;
 
 font-weight: 500;
 font-size: 16px;
@@ -263,21 +264,33 @@ line-height: 1.19;
 color: var(--primary-text-color);
  }
 
- .commands-text {
-margin-bottom: 94px;
+ .team-text {
+text-align: center;
+margin-bottom: 30px;
 font-size: 16px;
 line-height: 1.18;
 
 color: var(--basic-text-color);}
 
- .commands {
-    background-color: var(--bgc-color-commands);}
  .commands .commands-image + .commands-image {
     margin-left: 30px;}
-.commands 
+
+.commands-image {
+    background-color: var(--white-color-text);
+
+}
+.commands
 {
     display: flex;}
 
+.team-name {
+        padding-top: 30px;
+        padding-bottom: 10px;
+    }
+
+.team-image {
+    display: block;
+}  
 /* Footer */
 .site-contact .header-links {
 color: var(--basic-text-color);
@@ -299,13 +312,49 @@ color: var(--basic-text-color)
 }
 .footer {
     background-color: var(--bgc-color-hero);
+    padding-top: 60px;
+    padding-bottom: 60px;
 }
+
+.logo-colors {
+    color: var(--white-color-text);
+}
+
+.footer-address {
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 1.71;
+letter-spacing: 0.03em;
+
+color: var(--white-color-text)
+}
+
+.footer-links {
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    text-decoration: none;
+    
+    color: var(--color-footer-contact)
+}
+.site-contact .footer-links:hover,
+.site-contact .footer-links:focus {
+color: var(--accent-text-color);
+}
+
+
+
 
 /* STYLES FOR PORTFOLIO.HTML */
 .button-site{
     display: flex;
-    margin: 100px 0 50px 0;
-    justify-content: center;}
+    margin-bottom: 50px;
+    justify-content: center;
+    align-items: center;
+}
+    
 
 .button-site .btn-item + .btn-item {
     margin-left: 30px;}
@@ -317,7 +366,9 @@ font-family: 'Roboto';
 font-weight: 500;
 font-size: 16px;
 line-height: 1.7;
-letter-spacing: 0.03em;}
+letter-spacing: 0.03em;
+border: none;
+padding: 6px 25px;}
 
 .button-site .link:hover,
 .button-site .link:focus {
@@ -327,15 +378,15 @@ color: var(--white-color-text);}
 /* -------Cards-portfolio----- */
 .portfolio-title {
 margin-top: 20px;
-margin-bottom: 4px;
+margin-left: 24px;
+margin-right: 24px;
 color: var(--primary-text-color);
 font-weight: 700;
 font-size: 18px;
 line-height: 2;
 letter-spacing: 0.06em;
 
-border-left: 1px solid #ECECEC;
-border-right: 1px solid #ECECEC;
+
 
 }
 
@@ -344,19 +395,26 @@ color: var(--basic-text-color);
 
 font-size: 16px;
 line-height: 1.9;
+margin: 4px 24px 20px 24px;
 
-border-bottom: 1px solid #ECECEC;
-border-left: 1px solid #ECECEC;
-border-right: 1px solid #ECECEC;
 }
 
 .portfolio {
     display: flex;
     flex-wrap: wrap;
 }
+.portfolio-image {
+    display: block;
+}
+
+.portfolio-info {
+border-bottom: 1px solid #ECECEC;
+border-left: 1px solid #ECECEC;
+border-right: 1px solid #ECECEC;
+
+    }
 
 .portfolio-item {
-    width: 370px;
     margin-right: 30px;
     
     
